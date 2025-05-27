@@ -136,21 +136,45 @@ h1 {
     background-color: #f8f8f8;
 }
 
-.add-card-btn {
+.add-card-btn-todo {
     width: 100%;
     padding: 10px;
     background-color: rgba(9,30,66,.04);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color: #5e6c84;
+    color: black;
+    background-color: #ff6b6b;
     font-size: 14px;
     transition: background-color 0.2s ease;
 }
 
-.add-card-btn:hover {
-    background-color: rgba(9,30,66,.08);
+.add-card-btn-progress {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(9,30,66,.04);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    background-color: #feca57;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
 }
+
+.add-card-btn-done{
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(9,30,66,.04);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    background-color: #5aac44;
+    font-size: 14px;
+   
+}
+
 
 /* Modal styles */
 .modal {
