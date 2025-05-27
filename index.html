@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/style.css/index.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Todo List App</h1>
+        
+        <div class="boards-container">
+            <!-- ToDo Board -->
+            <div class="board" id="todo-board">
+                <h2 class="board-title todo-title">To Do</h2>
+                <div class="cards-container" id="todo-cards">
+                    <!-- Cards will be added here by JavaScript -->
+                </div>
+                <button class="add-card-btn" onclick="addNewCard('todo')">+ Add Card</button>
+            </div>
+            
+            <!-- In Progress Board -->
+            <div class="board" id="inprogress-board">
+                <h2 class="board-title inprogress-title">In Progress</h2>
+                <div class="cards-container" id="inprogress-cards">
+                
+                </div>
+                <button class="add-card-btn" onclick="addNewCard('inprogress')">+ Add Card</button>
+            </div>
+            
+            <!-- Done Board -->
+            <div class="board" id="done-board">
+                <h2 class="board-title done-title">Done</h2>
+                <div class="cards-container" id="done-cards">
+                
+                </div>
+                <button class="add-card-btn" onclick="addNewCard('done')">+ Add Card</button>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Task</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-title">Title:</label>
+                    <input type="text" id="task-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-description">Description:</label>
+                    <textarea id="task-description" name="description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="task-status">Status:</label>
+                    <select id="task-status" name="status">
+                        <option value="todo">To Do</option>
+                        <option value="inprogress">In Progress</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="submit-btn">Add Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/node.js/script.js"></script>
+</body>
+</html>
